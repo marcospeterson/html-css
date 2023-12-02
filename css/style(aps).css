@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
+
+
+* {
+    box-sizing: border-box;/* n sei direito, mas no meu caso serviu para contar o padding no widht. Ex = widht:1000px; padding:30px = 1030px. Com o elemento o padding ja ta contando pra da 1000 */
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.menu {
+    background-color: #adadad;
+    display: block;
+    
+    padding: 5ch;
+}
+
+.navbar {
+    display: inline-block;
+    background-color: white;
+    margin-top: 5ch;
+    overflow: hidden;/* elemento fora da "caixa" não vai aparecer */
+    border-radius: 5px;
+    padding-top: 1ch;
+    padding-bottom: 1ch;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    display: inline;
+    padding: 2ch;
+    transition: 0.3s;
+    
+    
+}
+
+.navbar a:hover {
+    color: white;
+    background-color: #252525;
+    margin: 0;
+
+}
+
+#active {
+    font-weight: bold;
+}
+
+.other {
+    float: left;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#aside{
+    background-color: #dddddd;
+    float: left;
+    padding: 1ch 2ch;
+    width: 30%;
+}
+#aside hr {
+    margin-top: 1ch;
+    margin-bottom: 1ch;
+}
+
+#aside li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#mainPost {
+    background-color: #252525;
+    color: white;
+    text-align: justify;
+    width: 70%;
+    height: 228px;
+    padding: 10px;
+    float: right;
+    
+}
+
+#clear {
+    clear: both;
+}
+
+footer {
+ 
+    background-color: rgb(131, 130, 130);
+    color: black;
+    padding: 10px;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer > img {
+    display: inline;
+    float: right;
+    margin-left: 20px;
+    
+}

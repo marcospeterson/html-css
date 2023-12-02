@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* SELETORES PERSONALIZADOS
+ # = id
+ . = class
+ : = pseudo-class
+ :: = pseudo-element
+ > = children mas ele colocou clildren
+ */
+
+* {/* configurações globais */
+    height: ;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+    font-size: 20px;
+    background-image: linear-gradient(to right, #D8B08C, #FFCB9A);
+    /*  background-image: radial-gradient( circle, #9804D6, #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A); */
+    /* Podemos colocar a porcentagem de cada cor:( to top, #9804D6 10%, #D20399,#F464A2 20%,#E84A97,#EF6E12,#F6AE0A); */  
+
+}
+
+a{/* pseudo classe um : pseudo elementos :: */
+    color: darkorchid;/* cor do link */
+    font-weight: bold;/* peso da fonte, negrito, light etc */
+    text-decoration: none;/* tira a linha de baixo do link */
+}
+
+a:visited{/* link quando for visitado */
+    color:rgb(84, 28, 112);
+}
+
+a:hover{/* quando estiver com o mouse por cima do link */
+    color: blue;
+    text-decoration: underline;/* para ficar sublinhado */
+}
+
+a:active{/* a cor dele ativo, quando eu estou clicando nele (não confuda com o visited) */
+    color: darkorange;
+}
+
+a::after {/* Depois dos links */
+    content: '⇦';/*(content = conteúdo). pesquise simbolos html 5 */
+    color: darkgray;
+    font-weight: normal;
+}
+
+a::before{/* antes do link */
+    content: '⇒';/*(content = conteúdo). pesquise simbolos html 5 */
+    color: darkgray;
+    font-weight: normal;
+
+}
+
+main{
+    background-color: white;
+    border-radius: 8.5px 10px;/* O quão arredondado vai estar a borda do seu quadrado. Dá para fazer um circulo usando isso, basta ter um quadrado com widht e height iguais e colocar 50% em vez y px. */
+    box-shadow: 5px 5px 15px 20PX #77614e80; /*é o sombreado do meu quadrado, 5px pra direita, 5px para baixo, 15px de espalhar/embaçar, 20px de alcance/tamanho que essa sombra irá ter(geralmente não é usado)  e o nome da cor  INSET.  */
+    width: 1000px;/* widht = largura que o tema(caixa) especifico vai ocupar na página  */
+    padding: 10px;/* preechimento, o quanto de pixels terá depois do parágrafo */ 
+    margin: auto;/* imagem automático, sempre vai ficar no meio independente do tamanho da tela */
+    outline: auto;/* contorno traçado da borda(não confuda com border) */
+    text-align:justify;/* justify, right, left, center */
+    
+
+
+    
+
+}
+
+h1{
+   color: brown;
+   text-align: center;
+   text-shadow: 1px 1px 2px rgba(165, 42, 42, 0.514);/* mesma coisa que o Box shadow, porém, em vez de ser a "caixa vai ser o texto */
+   height: 300px;/* tamanho da caixa o de baixo tbm */
+   width: 300px;
+   background-color: aqua;
+
+   /* da para transformar box-level em inline-level é só fazer isso:
+   display:inline;          ou o contrário
+   display:block;           e tbm os dois juntos
+   display: inline-block    características de ambos
+    */
+
+   border-width: 10px;/* largura, expessura da borda */
+   border-style: solid;/* dashed = linhas meio que pontilhada. dotted = pontilhada. double = linha dupla. groove = margem 3d(feio) */
+   border-color: #df0e0e;/* cor da borda */
+
+   /* shorthand 
+   border:10px, solid, #df0e0e;
+   */
+
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: #df0e0e;
+
+    /* shorthand
+    outline: 5px, dashed, #df0e0e;
+    */  
+
+   padding-top: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   padding-left: 10px;
+   
+/* shorthand
+    padding: 10px, 10px, 10px, 10px;(se as 4 forem iguais é só colocar uma vez 10 e acabou)
+    padding:10px, auto, 10px, auto;
+    padding:10px, 20px (aqui ele não colocar só em cima e na direita, mas sim em cima e em baixo 10px e direita e esquerda 20px)
+
+*/
+
+   margin: auto;/* é a margem, o espaço que vai ficar entre os elementos, e deixando em auto vai ficar no meio (a caixa) */
+   /* shorthand
+    margin:auto;
+    se você quise só deixar auto na direita e esquerda para ficar no meio da tela é só colocar assim:
+    margin:20px, auto, 50px auto;
+   */
+
+
+
+   /* height = altura
+    width = largura
+    border = linha que circula a sua caixa
+    padding = basicamente o espaçamento que você quer na caixa
+    margin = borda para fora (sei lá)
+    outline = contorno, traçado */
+}
+
+h2{
+    color: darkgreen;
+}
+
+p{
+    text-align: justify;
+    text-indent: 20px;/* é a margem do parágrafo basicamente. */
+}
+
+
+
+/* max-width: 100% */

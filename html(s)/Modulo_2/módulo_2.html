@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2</title>
+    <style>
+        * {/* configurações globais das CSS */
+            text-align: justify;
+        }
+        body{
+            background-image: url('imagenscode/m.jpg'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover; /* Garante que a imagem cubra todo o fundo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+
+            
+            text-align:justify;/* justify, right, left, center */
+            text-indent: 20px;/* margem do parágrafo */
+            font-family: 'work sans', Arial, Helvetica, sans-serif; 
+            font-size: 20px;
+            font-weight: normal; /* weight (peso) widht (largura) height(altura) 
+            lighter, normal, bold bolder, além de poder colocar em números, 100,200,300...900 */ 
+            font-style:italic ; /* italic, */
+            /* shorthand
+            - font-sytle -> font-weight -> font-size -> font-family */
+
+            font: italic bolder 20px arial, sans-serif;
+
+             /* 
+             Medidas absolutas
+             cm, mm, in, px, pt, pc
+
+            Medidas Relativas
+            em, ex, rem, vw, vh, %
+            16px geralmente = 1em
+             */
+            background-image: linear-gradient( to top, #9804D6 , #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A);
+            /*  background-image: radial-gradient( circle, #9804D6, #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A); */
+            /* Podemos colocar a porcentagem de cada cor:( to top, #9804D6 10%, #D20399,#F464A2 20%,#E84A97,#EF6E12,#F6AE0A); */
+
+                                    /* 90deg, noventa graus */
+                                    /* to right, to top, to left, to bottom  */
+        }
+
+        img{display: block; /* Para remover espaçamento extra que imagens por padrão têm em inline elements */
+        margin: 0 auto; /* Define as margens esquerda e direita como "auto" para centralizar horizontalmente */
+    }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1> cores e estilos, Módulo 2
+    <hr>
+        <h2>Psicologia das cores</h2>
+        <p>As cores tem um papel fundamental nas escolhas de produtos que compramos, e por isso é muito importante saber harmonizar as cores, abaixo uma imagem e um links onde você pode ler sobre isso.</p>
+        <img src="img/cores1.png" alt="tabela de cores"><br>
+        
+        <p> clique <a href="audios_videos_pdfs/2_Infografico Psicologia das Cores e Tipografia.pdf" download="exercícios/imagens/2_Infografico Psicologia das Cores e Tipografia.pdf" target="_blank" type="application/pdf">aqui</a> para abrir um pdf sobre cores</p>
+        <p>Link para site que você pode testar e combinar cores <a href="https://color.adobe.com/pt/create/color-wheel" target="_blank" rel="external">https://color.adobe.com/pt/create/color-wheel</a></p>
+        <p>Existe várias formas de representar cores em html, tem o RGB,HSL também a representação Hexadécimal</p>
+        
+        <h2 style=" background-image: linear-gradient( to right, #9804D6, #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A);">Harmonia de cores</h2>
+
+        <li>cores primárias: Azul, amarelo e vermelho.</li>
+        <li>Cores secundárias:Verde, roxo e laranja.</li>
+        <li>Cores terciárias: Cores que estão entre as primárias e as secundárias.Ex: amarelo esverdeado, vermelho-alaranjado.(obs:Sempre o nome de cores terciárias começam com o nome das cores primárias e depois as secundárias, e não ao contrário.)</li>
+        
+        <p>Quando for fazer um site, geralmente é usado um paleta de 3 a 5 cores(geralmente 4), desconsiderando branco e preto.</p>
+        <p style="background-color: #253993; color: blanchedalmond;">testando background-color e color. </p>
+        <p>Para textos muito longos em sites, de preferência a fontes não serifadas</p>
+        <h2>Gradientes</h2>
+        <img src="exercícios/imagens/Captura de tela 2023-11-24 181827.png" alt="">
+
+        <p>Agora indo para o css, temos o inline, que como o própio nome sugere, é você colocar como você quer na própria linha.Ex:</p>
+        <code><pre>
+            &lt;h3 style="color: blue;">EXEMPLO&lt;/h3>
+        </pre></code>
+        <h3 style="color: blue;">EXEMPLO</h3>
+
+        <p>Também temos os estilos locais/internos, que geralmente são só usados em por exemplo, site que sÓ tem uma página. Para fazer isso é só colocar no body. A desvatagen é que quando você tem um site com várias páginas, você teria que ficar copiando e colando em cada página. Você pode colocar mais de um estilo, por exemplo quando você quiser alguma coisa a mais só em algumas páginas ai você utilizaria mais de um estilo</p>
+        
+
+        <h2>Fontes</h2>
+            <p>Alguns dispositivos não iram suportar algumas fontes, por isso, na hora de colocar as fontes no seu site o ideal é colocar mais de 1, da mesma família para não perder a essencia da fonte. Também é possível você não específicar a fonte, apenas digitando oque a fonte tem que ter ou não por exemplo: sans-serif(sem serifa), serif(serifada), nesses casos o navegador vai pegar a fonte que quiser usando serifa, ou no outro caso sem serifa. Sempre acabe de escrever as fontes com uma específicação, assim se não tiver as fontes desejadas ele pegará uma fonte genérica. </p>
+            <p>Ex: font-family: Arial, Helvetica, sans-serif;</p>
+            <p>As duas principais medidas para usar no seu site é <b>px</b> e <b>em</b>. O padrão dos navegadores é de 16px , ele já vem com essa medida. Geralmente 16px = 1em</p> <!-- Monospace -->
+            <h3>Fontes em css</h3>
+                <p>Temos várias configurações de fontes que podemos fazer, as principais são</p>
+            <pre>
+                text-align: justify;
+                font-style: oblique;
+                font-weight: normal;
+                font-size: 20px;
+                font-family: 'work sans', Arial, Helvetica, sans-serif; </pre>
+                <p>Em vez de fazer essas 4 configurações de fontes, da para compactar tudo em apenas uma linha, basta fazer isso:</p>
+            <pre>
+                A ordem é font-sytle -> font-variant -> font-weight -> font-size -> font-family
+                font: italic bolder 20px arial,sans-serif;
+            </pre>
+
+            <h3>Fontes exportadas</h3>
+                <p>Primeiro acesse o <a href="https://fonts.google.com/" target="_blank">google fontes</a> e vai adicionando as fontes que você quer, depois é só importar elas(o próprio google fontes já deixa ali direitinho para você colocar no seu site)</p><!-- @ = regras, vem primeiro que qualquer coisa no css e no style -->
+            <h3>Fontes externas</h3> 
+                <p>Outro site muito bom para pegar fontes é o <a href="https://www.dafont.com/pt/" target="_blank">dafont</a> nele você terá que baixar as fontes</p>
+                
+                <code><pre>
+                    &lt;style>
+                    @font-face {
+                        font-family: 'love';<!-- coloque o nome que você quiser aqui, mas não esqueça de colocar o mesmo nome la na font-family -->
+                        src: url('MADEMountain-Regular.otf') format('opentype');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+                    body {
+                        font-family:'love', arial, Helvetica, sans-serif;
+                        font-size: 3em;
+                        font-weight: normal;
+                    }
+                
+                    - Tipos de format()
+                    - opentype (otf)
+                    - truetype (ttf)
+                    - embedded-opentype
+                    - truetype-aat (Apple Advanced Typography)
+                    - svg
+
+                </pre></code>
+                <p>Para dectar fontes dentro de imagens recomendo você ver esse vídeo: <a href="https://www.youtube.com/watch?v=i_c5Fzk807M&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=17" target="_blank">aqui</a>, onde o guanabara mostra sites que você pode fazer isso.</p>
+
+                <h3>ID e Class</h3>
+                    <p>Quando usamos css, colocamos por exemplo que o h1 vai ser verde, mas e se eu quiser que todos os h1 sejam verde menos 1, como eu posso fazer isso? Para fazer isso você pode usar o ID(identificador),desta forma:</p>
+                    <code><pre>
+                    &lt;h1 id= "principal">
+
+                    /* CSS */
+
+                    h1#principal{<!-- ou #principal -->
+                        text-align:center;
+                    }
+                    </pre></code>
+
+                    <p>Em HTML é id = em CSS é # <br><!-- só um elemento. -->
+                        em HTML é class = em CSS é .<br></p><!-- pode vários elementos. -->
+
+                    <p>Referente aos id's, nós temos uma grande limitação: Dentro de um documento HTML, só se pode ter um elemento com o "id" e o seu respectivo nome.<br><br>
+
+                        Você pode ter mais de um id em sua página tranquilamente. O que não pode é utilizar dois com o mesmo nome / texto no id. O id é como se fosse um CPF (1 número por pessoa) enquanto a class é o nome (no qual várias pessoas podem ter o mesmo nome).<br><br>
+                        
+                        Pensando nisso, quando temos duas unidades de elementos ou mais e queremos aplicar uma configuração personalizada de estilo em todas elas, nós não devemos usar o "id" e sim o "class".<br><br>
+                        Outra coisa é que você pode colocar mais de uma elemento em uma class, ex:class = "avancado destaque"(não precisa de vírgula para separar)</p>
+                        <p>Nunca de nomes as classe e as id de acordo com suas formas, mas assim pela sua funcionalidade. </p>
+                        
+
+                    <h2>Sombra nas caixas</h2>
+                    <p>1 - Deslocamento horizontal - O quanto a sombra irá andar para o lado direito ou esquerdo (Valor em negativo para ir pra esquerda, ex: " -10px ") - X OFFSET<br><br>
+
+                        2 - Deslocamento vertical - O quanto a sombra irá andar para baixo ou para cima (Valor em negativo para ir pra cima, ex: " -10px ") - Y OFFSEY<br><br>
+                        
+                        3 - O quanto essa sombra irá espalhar/embaçar - BLUR<br><br>
+                        
+                        4 - Nível de alcance/tamanho que essa sombra irá ter (ESSE VALOR GERALMENTE NÃO É USADO, É SÓ NÃO INSERI-LO NA SHORTHAND NESSE CASO) - SPREAD<br><br>
+                        
+                        5 - Qual cor essa sombra vai ter e o nível de transparência (alpha) que essa cor irá ter <br><br>
+                        
+                        Exemplo de Shorthand (sem o valor "spread" ): " box-shadow: 1px 1px 1px black; " (Siga a ordem de inserção de valores do exemplo na hora de usar uma shorthand, caso contrário não funcionará corretamente)<br><br>
+                        
+                        Ao configurar a sombra de uma caixa, é interessante abrir o DevTools e formatar os valores da shorthand pelo Sub Menu de Regulagem "shadow editor" da interface DevTools de maneira manual e observando as mudanças em tempo real na tela do navegador, até encontrar a configuração ideal... Passando essa configuração ideal para o código no VSC posteriormente.<br><br>
+                        
+                        Também é possível inserirmos sombras do LADO DE DENTRO de uma caixa. Apesar de não ser muito recomendável botar isso em prática na maioria dos casos... Para fazer isso basta inserir o parâmetro "inset" como o primeiro valor na Shorthand, exemplo: " box-shadow: inset 1px 1px 1px black; " <br><br>
+                        
+                        Frequentemente usamos somente a cor preta para representar sombras, isso porque sombras coloridas geralmente ficam estranhas e com um efeito "não natural".<br><br>
+                        
+                        Normalmente, após configurar os valores para a sua sombra, ela ainda continuará com uma cor muito forte (sólida)... Para amenizar isso e tornar a exibição algo mais "natural" e suave, adicionamos transparência à cor (black), normalmente 50% de transparência é o recomendado.</p><br><br>
+                        
+                <hr>
+</body>
+</html>
