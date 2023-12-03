@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição dos fundos</title>
+    <style>
+        div.bloco{
+            height: 180px;
+            border:1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            background-image: url(img/wallpaper003.jpg);
+        }
+
+        div#q1{
+            background-position: left top;/*esquerda topo da imagem*/
+        }
+
+        div#q1{
+            background-position: left center;/*esquerda centro da imagem*/
+        }
+
+        div#q3{
+            background-position: right bottom;/*direita embaixo da imagem*/
+        }
+
+        div#q4{
+            background-position: center center;/* centro centro da imagem*/
+        }
+
+        /* Algo que o professor não acabou falando, mas que pode ser muito útil em alguns casos, é poder utilizar "px", no lugar das referências como "left" e "center", sendo o primeiro px para a posição X e o segundo para a posição Y. 
+ */
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1"></div>
+    <div class="bloco" id="q2"></div>
+    <div class="bloco" id="q3"></div>
+    <div class="bloco"id="q4"></div>
+</body>
+</html>
