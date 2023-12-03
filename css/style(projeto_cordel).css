@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+*{
+    margin: 0px;
+}
+body{
+    margin: auto;
+}
+header{
+    background-color: black;
+    padding: 50px;
+}
+
+header >h1{
+    font-size: 3.8em;
+    color: white;
+    text-align: center;
+    font-family: "Passion one", Arial, Helvetica, sans-serif;
+}
+header p{
+    text-align: center;
+    color: white;
+    line-height: 1;
+    font-family: arial, Verdana, Tahoma, sans-serif;
+    margin-top: 10PX;
+}
+
+header a{
+    text-decoration: none;
+    font-style: BOLD;
+    color: white;
+}
+
+pre{
+    white-space: pre-line;
+    line-height: 2;
+    font-size: 25px;
+    font-family: "Sriracha", Arial, Helvetica, sans-serif;
+
+}
+
+section.quadrado{
+
+    box-shadow: 2px 2px 15px 3PX #00000080 inset;
+
+
+}
+
+section.quadrado pre{
+    background-color: rgba(0, 0, 0, 0.473);
+    color: white;
+    display: inline-block;
+    padding: 5px;
+}
+
+#q1{
+    background: url(../html_s/Projeto_Cordel/img/background001.jpg) center right/cover fixed;
+}
+
+#q2{
+    background: url(../html_s/Projeto_Cordel/img/background002.jpg) center top/cover fixed;
+}
+
+
+/* Shortland background
+color > image > position > repeat > size > attachment
+background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+*/
+
+
+
+
+section{
+    padding-left: 30px;/* substituiu a margem que eu tinha colocado no pre */
+    padding-top: 10vh;
+    padding-bottom: 10vh;/* adicione esses dois valores e tirei a margin ali no "pre" */
+    line-height: 2;/* tirei do pre e coloquei aqui */
+    padding-left: 30px;/* substituiu a margem que eu tinha colocado no pre */
+}
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}

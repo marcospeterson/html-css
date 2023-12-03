@@ -57,7 +57,7 @@ a::before{/* antes do link */
 main{
     background-color: white;
     border-radius: 8.5px 10px;/* O quão arredondado vai estar a borda do seu quadrado. Dá para fazer um circulo usando isso, basta ter um quadrado com widht e height iguais e colocar 50% em vez y px. */
-    box-shadow: 5px 5px 15px 20PX #77614e80; /*é o sombreado do meu quadrado, 5px pra direita, 5px para baixo, 15px de espalhar/embaçar, 20px de alcance/tamanho que essa sombra irá ter(geralmente não é usado)  e o nome da cor  INSET.  */
+    box-shadow: 5px 5px 15px 20PX #77614e80 inset; /*é o sombreado do meu quadrado, 5px pra direita, 5px para baixo, 15px de espalhar/embaçar, 20px de alcance/tamanho que essa sombra irá ter(geralmente não é usado)  e o nome da cor  INSET.  */
     width: 1000px;/* widht = largura que o tema(caixa) especifico vai ocupar na página  */
     padding: 10px;/* preechimento, o quanto de pixels terá depois do parágrafo */ 
     margin: auto;/* imagem automático, sempre vai ficar no meio independente do tamanho da tela */

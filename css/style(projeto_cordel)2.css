@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: "Sriracha", cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+
+}
+html,body{
+    background-color: gray;
+    min-height: 100vh;
+    font-family: var(--fonte1)
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+header >h1{
+    padding: 50px;
+    font-size: 10vw;/* viewport widht = largura da tela, ou seja 10 da largura da tela assim o tamanho da fonte vai se adptar com o tamanho das telas   */
+    font-family: var(--fonte2);
+    /* text-transform: uppercase; serve para a letra ficar toda em maiuscula */
+    font-variant: small-caps;/* todas as letras ainda vão estar maiuscula, porem a primeiras letras das palavras vão estar maiores que as outras */
+}
+header p{
+    line-height: 1;
+    font-family: arial,Verdana, Tahoma, sans-serif;
+    padding-bottom: 50px;
+    margin-top: 10PX;
+
+}
+
+header a, footer a {
+    text-decoration: none;
+    font-weight: BOLD;
+    color: white;
+}
+
+ header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+pre{/* seria o paragrafo mas como fiz um macete agora é pre */
+    white-space: pre-line;
+    font-family: "Sriracha", Arial, Helvetica, sans-serif;
+
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;/* adicione esses dois valores e tirei a margin ali no "pre" */
+    line-height: 2;/* tirei do pre e coloquei aqui */
+    padding-left: 30px;/* substituiu a margem que eu tinha colocado no pre */
+    font-family: var(--fonte3);
+    font-size: 3.5vw;/* aqui que faz tudo ficar maior e menor na tela. IMPORTANTE************ESSE O OUTRO 
+    importante de baixo são oque mandam no site, a diferença entre a minha versão e o do prof é essas linhas */
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.548);
+    color: white;
+    box-shadow: 6px 6px;
+}
+
+section.imagem pre{
+    display: inline-block;/* vai fazer o quadrado se adpatar sem ela vai ficar com o widht 100% e ela n se adapta  IMPORTANTE*************/
+    background-color: rgba(0, 0, 0, 0.411);
+    color:white;
+    padding: 5px;
+    text-shadow: 2px 2px 13px black;
+
+}
+
+section#img01{
+    background: url(../html_s/Projeto_Cordel/img/background001.jpg) center center /cover fixed;
+}
+
+section#img02{
+    background: url(../html_s/Projeto_Cordel/img/background002.jpg) center top/cover fixed;
+
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

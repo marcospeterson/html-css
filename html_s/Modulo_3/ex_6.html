@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    ,<style>
+        /* como colocar o conteudo centralizado tanto verticamente quanto horizontalmente:
+        por padrão nós colocamos o margin: auto para fazer a centralização, porém usando isso ele só vai ficar centralizado verticalmente e não horizontalmente. Para resolver isso podemos colocar os seguintes comandos: */
+        #container{
+            background-image: url(img/target001.png);
+            background-size: 100% 100%;
+            
+            height: 500px;
+            padding: 10px;
+            background-color: purple;
+            position: relative;/* colocar o "container" relativo(por padrão ele já é relativo mas é bom colocar para seu aprendizado) "o que está fora é relativo" */
+        }
+
+        #conteudo{
+            position: absolute;/* o que esta dentro é absolute, com isso da pra vc brincar com left e top */
+            height: 200px;
+            width: 400px;
+            background-color: aquamarine;
+
+            left: 50%;
+            top: 50%;
+            /* perceba que ficou para baixo e para a direita, isso pq o 50% está relativo ao começo da imagem, isto é, por padrão sempre será no canto superior esquerdo, se você parar para olhar verá que a imagem, relativo onde ela começa, está realmente no meio.  */
+
+            transform: translate(-50%, -50%);/* para concertar isso colocamos o elemento transform: translate, ou seja ele muda a posição de referência de 'topo/esquerdo' (padrão), para uma outra qualquer (ex: centro) brinque com as porcentagens e veja os resultados!!*/
+
+            /* forma mais fácil de colocar:
+        
+               #container {
+	                display: flex;	        	(possui diversas funções, uma delas é habilitar o manejo do conteúdo)
+	                justify-content: center;	(alinhamento horizontal, dispensando o 'margin: auto')
+    	            align-items: center;		(alinhamento vertical)
+      }
+	   -> Essas propriedades são colocadas no elemento-pai (container, nesse exemplo). */
+                                                                                    
+        
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>
