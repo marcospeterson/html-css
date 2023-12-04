@@ -26,7 +26,7 @@ header{
     color: white;
 }
 
-header >h1{
+header h1{
     padding: 50px;
     font-size: 10vw;/* viewport widht = largura da tela, ou seja 10 da largura da tela assim o tamanho da fonte vai se adptar com o tamanho das telas   */
     font-family: var(--fonte2);
