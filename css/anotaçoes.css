@@ -1,0 +1,216 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?falily=Pacifico');
+@font-face {
+	font-family: 'FonteTitulo';
+	src: url("../fontes/MADEMountain-Regular.otf");}
+
+
+/* SELETORES PERSONALIZADOS
+ # = id
+ . = class
+ : = pseudo-class
+ :: = pseudo-element
+ > = children mas ele colocou clildren
+ */
+
+*{
+    box-sizing: border-box;/* n sei direito, mas no meu caso serviu para contar o padding no widht. Ex = widht:1000px; padding:30px = 1030px. Com o elemento o padding ja ta contando pra da 1000 */
+}
+ 
+body{
+    
+    font-size: 20px;
+    background-image: linear-gradient(to right, #D8B08C, #FFCB9A);
+    /*  background-image: radial-gradient( circle, #9804D6, #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A); */
+    /* Podemos colocar a porcentagem de cada cor:( to top, #9804D6 10%, #D20399,#F464A2 20%,#E84A97,#EF6E12,#F6AE0A); */  
+    line-height: 2;/* espaçamento entre as linhas dos parágrafos */
+    text-indent: 20px;/* é a margem do parágrafo basicamente. */
+    max-width: 600px;/* max de px que ele vai ocupar na página */
+
+}
+
+
+header >h1{
+    padding: 50px;
+    font-size: 10vw;/* viewport widht = largura da tela, ou seja 10 da largura da tela assim o tamanho da fonte vai se adptar com o tamanho das telas   */
+    font-family: var(--fonte2);
+    /* text-transform: uppercase; serve para a letra ficar toda em maiuscula */
+    font-variant: small-caps;/* todas as letras ainda vão estar maiuscula, porem a primeiras letras das palavras vão estar maiores que as outras */
+}
+
+a{/* pseudo classe um : pseudo elementos :: */
+    color: darkorchid;/* cor do link */
+    font-weight: bold;/* peso da fonte, negrito, light etc */
+    text-decoration: none;/* tira a linha de baixo do link */
+}
+
+
+.container{
+    display: inline-block;/* vai fazer o quadrado se adpatar sem ela vai ficar com o widht 100% e ela n se adapta  IMPORTANTE*************/
+}
+
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;/* adicione esses dois valores e tirei a margin ali no "pre" */
+    line-height: 2;/* tirei do pre e coloquei aqui */
+    padding-left: 30px;/* substituiu a margem que eu tinha colocado no pre */
+    font-family: var(--fonte3);
+    font-size: 3.5vw;/* aqui que faz tudo ficar maior e menor na tela. IMPORTANTE************ESSE O OUTRO 
+    importante de baixo são oque mandam no site, a diferença entre a minha versão e o do prof é essas linhas */
+}
+
+
+.imgfavi {
+    display: inline;
+    vertical-align: middle; /* Adicione esta linha para alinhar verticalmente */
+    width: auto;
+   
+}
+
+
+a:visited{/* link quando for visitado */
+    color:rgb(84, 28, 112);
+}
+
+a:hover{/* quando estiver com o mouse por cima do link */
+    color: blue;
+    text-decoration: underline;/* para ficar sublinhado */
+}
+
+a:active{/* a cor dele ativo, quando eu estou clicando nele (não confuda com o visited) */
+    color: darkorange;
+}
+
+a::after {/* Depois dos links */
+    content: '⇦';/*(content = conteúdo). pesquise simbolos html 5 */
+    color: darkgray;
+    font-weight: normal;
+}
+
+a::before{/* antes do link */
+    content: '⇒';/*(content = conteúdo). pesquise simbolos html 5 */
+    color: darkgray;
+    font-weight: normal;
+
+}
+
+main{
+    background-color: white;
+    border-radius: 8.5px 10px;/* O quão arredondado vai estar a borda do seu quadrado. Dá para fazer um circulo usando isso, basta ter um quadrado com widht e height iguais e colocar 50% em vez y px. */
+    box-shadow: 5px 5px 15px 20PX #77614e80 inset; /*é o sombreado do meu quadrado, 5px pra direita, 5px para baixo, 15px de espalhar/embaçar, 20px de alcance/tamanho que essa sombra irá ter(geralmente não é usado)  e o nome da cor  INSET.  */
+    width: 1000px;/* widht = largura que o tema(caixa) especifico vai ocupar na página  */
+    padding: 10px;/* preechimento, o quanto de pixels terá depois do parágrafo */ 
+    margin: auto;/* imagem automático, sempre vai ficar no meio independente do tamanho da tela */
+    outline: auto;/* contorno traçado da borda(não confuda com border) */
+    text-align:justify;/* justify, right, left, center */
+}
+
+   
+.navbar {
+        display: inline-block;
+        background-color: white;
+        margin-top: 5ch;
+        overflow: hidden;/* elemento fora da "caixa" não vai aparecer */
+        border-radius: 5px;
+        padding-top: 1ch;
+        padding-bottom: 1ch;
+    }
+
+
+
+h1{
+    
+   color: brown;
+   text-align: center;
+   text-shadow: 1px 1px 2px rgba(165, 42, 42, 0.514);/* mesma coisa que o Box shadow, porém, em vez de ser a "caixa vai ser o texto */
+   height: 300px;/* tamanho da caixa o de baixo tbm */
+   width: 300px;
+   background-color: aqua;
+
+   /* da para transformar box-level em inline-level é só fazer isso:
+   display:inline;          ou o contrário
+   display:block;           e tbm os dois juntos
+   display: inline-block    características de ambos
+    */
+
+   border-width: 10px;/* largura, expessura da borda */
+   border-style: solid;/* dashed = linhas meio que pontilhada. dotted = pontilhada. double = linha dupla. groove = margem 3d(feio) */
+   border-color: #df0e0e;/* cor da borda */
+
+   /* shorthand 
+   border:10px, solid, #df0e0e;
+   */
+
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: #df0e0e;
+
+    /* shorthand
+    outline: 5px, dashed, #df0e0e;
+    */  
+
+   padding-top: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   padding-left: 10px;
+   
+/* shorthand
+    padding: 10px, 10px, 10px, 10px;(se as 4 forem iguais é só colocar uma vez 10 e acabou)
+    padding:10px, auto, 10px, auto;
+    padding:10px, 20px (aqui ele não colocar só em cima e na direita, mas sim em cima e em baixo 10px e direita e esquerda 20px)
+
+*/
+
+   margin: auto;/* é a margem, o espaço que vai ficar entre os elementos, e deixando em auto vai ficar no meio (a caixa) */
+   /* shorthand
+    margin:auto;
+    se você quise só deixar auto na direita e esquerda para ficar no meio da tela é só colocar assim:
+    margin:20px, auto, 50px auto;
+   */
+
+
+
+   /* height = altura
+    width = largura
+    border = linha que circula a sua caixa
+    padding = basicamente o espaçamento que você quer na caixa
+    margin = borda para fora (sei lá)
+    outline = contorno, traçado */
+}
+
+
+p{
+    text-align: justify;
+    
+}
+/* max-width: 100% */
+
+
+
+
+
+
+
+
+
+
+
+
+/* aqui va ao modulo 2 penultimo video e veja como ele fez, é meio que uma gambiarra e ele não explica exatamente então só copiei */
+div.video{
+    background-color: var(black);
+    margin: 0px -10px 30px -10px;/* o -10 é pra colar onde vc quer, basicamente */
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
