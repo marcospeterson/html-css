@@ -18,24 +18,57 @@
 }
 *{
     font-family:'Roboto', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    margin: auto;
     padding: 0px;
     text-align:justify;/* justify, right, left, center */
 
 }
 
 body{
+    margin: 0;    
+    padding: 0;    
+    max-width: inherit;    
+    background-color: #fff; 
+
     font-size: 20px;
-    background-color: var(--cor0);
     line-height: 2;/* espaçamento entre as linhas dos parágrafos */
 
+    min-height: 100vh;    
+    display: flex;    
+    flex-direction: column;    
+  }
+
+
+.nav1{
+    padding: 5px;
+    background-color: #202C33;
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    
+
+    
+}
+.nav1 a{
+    margin-right: 30px;
+    text-decoration: none;
+    padding:10px;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+.nav1 a:hover{
+    background-color: var(--cor3);
+    color: var(--cor5);
+    transition: 0.3s;
 
 }
 
+
 header{
     background-image: linear-gradient(var(--cor3), var(--cor5));
-    min-height: 150px;
+    min-height: 85px;
+    width: 100%;
     color: white; 
     margin: auto;
     
@@ -44,62 +77,59 @@ header{
 header h1{
     font-size: 3.5em;
     text-align: center;
-    padding-top: 65px;
+    padding-top: 70px;
     font-variant: small-caps;
+    margin: 0px;
 }
 
 header p{
     text-align: center;
     font-size:1.3em;
     padding-bottom: 50px;
-    max-height: 600px;
     margin: 0;
 }
 
-nav{
-    padding: 15px;
-    background-color: var(--cor4);
-    position: fixed;
-    width: 100%;
-    text-align: right;
-    
 
-    
-}
-nav a{
-    margin-right: 30px;
-    text-decoration: none;
-    padding:17px;
-    border-radius: 10px;
-    color: var(--cor1);
-    
-}
 
-nav a:hover{
-    background-color: var(--cor3);
-    color: var(--cor5);
-    transition: 0.3s;
+.container {    
+    display: flex;    
+    flex: 1;    
+  }
+  main {    
+    flex: 1;    
+    padding: 0 20px;    
+  }
 
-}
+  
+  nav {  
+    background: white;   
+    flex: 0 0 15%;    
+    padding: 0 10px;    
+    order: -1;    
+  }
+  aside {  
+    background: #eee;     
+    flex: 0 0 15%;    
+    padding: 0 10px;    
+  }
 
-#listas ul,
-#listas ol {
-    list-style-position: inside;
-}
+
+
+
+
+
 
 main{
     background-color: white;
     margin: auto;
-    min-width: 320px;/* lembre-se que ainda tem o padding */
-    max-width: 800px;
-    padding: 20px;
+    border: gray solid 1.1px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    box-shadow: 0px 0px 15px #2929297c;
+    
     
 }
 
-p {
+main p {
     margin:15px 0px ;
     text-indent: 20px;/* é a margem do parágrafo basicamente. */
 }
@@ -135,7 +165,8 @@ h3{
 
 
 .codigo{
-color: black;
+color: white;
+background-color: #202C33;
     border-radius: 10px;
     padding: 5px;
     font-family: "consolas","roboto", Arial, Helvetica, sans-serif;
@@ -155,44 +186,28 @@ a{
    
 }
 
-footer{
-    text-align: center;
-    background-color: #0B2C4D;
-    margin: 0px;
-    padding: 8px;
-}
-footer >p{
-    color: white;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    font-weight: 600;
-
-}
 
 img{
     width: 100%;
 }
 
-/* aqui va ao modulo 2 penultimo video e veja como ele fez, é meio que uma gambiarra e ele não explica exatamente então só copiei */
-div.video{
-    background-color: var(black);
-    margin: 0px -10px 30px -10px;/* o -10 é pra colar onde vc quer, basicamente */
-    padding: 20px;
-    padding-bottom: 56.5%;
+#article_aside{
+    font-size: 16px;
+}
+
+footer {
     position: relative;
-
+    background-color: black;
+    color: rgb(102, 102, 102);
+    padding: 2ch 3ch;
 }
-
-div.video > iframe{
+.text {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    bottom: 0;
+    right: 0;
+    padding-top: 4ch;
+    padding-right: 4ch;
 }
 
-video{
-    width: 100%;
-    margin: auto;
-}
+
+
