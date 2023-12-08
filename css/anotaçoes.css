@@ -182,6 +182,7 @@ h1{
 
 p{
     text-align: justify;
+    text-indent: 20px; 
     
 }
 /* max-width: 100% */
@@ -192,7 +193,13 @@ p{
 
 
 
-
+section#img01{
+    background: url(../html_s/Projeto_Cordel/img/background001.jpg) center center /cover fixed;
+}
+/* Shortland background
+color > image > position > repeat > size > attachment
+background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+*/
 
 
 

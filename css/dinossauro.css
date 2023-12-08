@@ -39,12 +39,12 @@ body{
 
 
 .nav1{
-    padding: 5px;
+    padding: 10px;
     background-color: #202C33;
     position: fixed;
     width: 100%;
-    text-align: right;
-    
+    text-align: right 
+      
 
     
 }
@@ -55,6 +55,8 @@ body{
     border-radius: 10px;
     color: white;
     
+
+    
 }
 
 .nav1 a:hover{
@@ -64,6 +66,15 @@ body{
 
 }
 
+#logo{
+        float: left;
+        font-weight: bold;
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        
+}
 
 header{
     background-image: linear-gradient(var(--cor3), var(--cor5));
@@ -95,11 +106,6 @@ header p{
     display: flex;    
     flex: 1;    
   }
-  main {    
-    flex: 1;    
-    padding: 0 20px;    
-  }
-
   
   nav {  
     background: white;   
@@ -113,21 +119,15 @@ header p{
     padding: 0 10px;    
   }
 
-
-
-
-
-
-
-main{
+  main {   
     background-color: white;
     margin: auto;
     border: gray solid 1.1px;
     border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    
-    
-}
+    border-bottom-right-radius: 15px; 
+    flex: 1;    
+    padding: 0 20px;    
+  }
 
 main p {
     margin:15px 0px ;
@@ -186,13 +186,9 @@ a{
    
 }
 
-
-img{
-    width: 100%;
-}
-
 #article_aside{
     font-size: 16px;
+   
 }
 
 footer {
