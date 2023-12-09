@@ -29,7 +29,7 @@ body{
     max-width: inherit;    
     background-color: #fff; 
 
-    font-size: 20px;
+    font-size: 16px;
     line-height: 2;/* espaçamento entre as linhas dos parágrafos */
 
     min-height: 100vh;    
@@ -119,6 +119,21 @@ header p{
     padding: 0 10px;    
   }
 
+  aside p {
+    background-color: #202C33;
+    color: rgb(216, 216, 216);
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px;
+   
+  }
+
+  #article_aside,nav{
+    font-size: 16px;
+    
+   
+}
+
   main {   
     background-color: white;
     margin: auto;
@@ -126,7 +141,8 @@ header p{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px; 
     flex: 1;    
-    padding: 0 20px;    
+    padding: 0 20px;  
+
   }
 
 main p {
@@ -136,9 +152,10 @@ main p {
 
 
 h2{
-    margin:15px 0px ;
+    margin:20px 0px ;
     font-size: 30px;
     text-align: center;
+    line-height:1.2;
 }
 
 h3{
@@ -186,10 +203,6 @@ a{
    
 }
 
-#article_aside{
-    font-size: 16px;
-   
-}
 
 footer {
     position: relative;
@@ -197,6 +210,16 @@ footer {
     color: rgb(102, 102, 102);
     padding: 2ch 3ch;
 }
+
+
+
+#logo {
+    float: left;
+    width: 15ch;
+    left: 0;
+    transition: transform 0.3s;
+}
+
 .text {
     position: absolute;
     bottom: 0;
@@ -205,5 +228,13 @@ footer {
     padding-right: 4ch;
 }
 
+img{
+    border-radius: 10px;
+}
 
+
+#listas ul,
+#listas ol {
+    list-style-position: inside;
+}
 

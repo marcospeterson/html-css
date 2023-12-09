@@ -63,10 +63,6 @@ main{
     margin: auto;/* imagem automático, sempre vai ficar no meio independente do tamanho da tela */
     outline: auto;/* contorno traçado da borda(não confuda com border) */
     text-align:justify;/* justify, right, left, center */
-    
-
-
-    
 
 }
 
@@ -136,6 +132,7 @@ h2{
 p{
     text-align: justify;
     text-indent: 20px;/* é a margem do parágrafo basicamente. */
+    line-height: 2px; /* espaçamento entre as linhas dos parágrafos */
 }
 
 
