@@ -74,11 +74,7 @@ h1{
    width: 300px;
    background-color: aqua;
 
-   /* da para transformar box-level em inline-level é só fazer isso:
-   display:inline;          ou o contrário
-   display:block;           e tbm os dois juntos
-   display: inline-block    características de ambos
-    */
+
 
    border-width: 10px;/* largura, expessura da borda */
    border-style: solid;/* dashed = linhas meio que pontilhada. dotted = pontilhada. double = linha dupla. groove = margem 3d(feio) */
@@ -133,8 +129,72 @@ p{
     text-align: justify;
     text-indent: 20px;/* é a margem do parágrafo basicamente. */
     line-height: 2px; /* espaçamento entre as linhas dos parágrafos */
+  
 }
-
-
-
 /* max-width: 100% */
+
+
+
+
+   /* da para transformar box-level em inline-level é só fazer isso:
+   display:inline; o tamnaho do elemento é o tamanho do conteúdo. Ex: (span) (a) etc
+   display:block; vai ocupar todo o "espaço" da tela, nd vai ficar do lado. Ex titulos(h1) parágrafos (p) etc. 
+   display: inline-block    características de ambos
+   display: flex; nos outros display você configura a caixa em si e como ela se relaciona com o resto, mas aqui você trabalha com o que está dentro da caixa.Quando colocado, automaticamente os itens dentro dessa caixa vão estar "inline".
+    */
+
+.container{
+    background-color: #eee;
+    border: 2px solid red;
+   
+    max-width: 300px;
+    height: 300px;
+    display: flex;/* é meio que a regra que vc coloca para que possa colocar os as outros elementos abaixo */
+
+    /* alinhamento vertical */
+    justify-content: space-between;/* center deixa os itens colados no meio. space arouns = deixa alinhado mas com espaçamento. space-between = ele cola no padding (ou na linha mesmo se n tiver padding) e o resto é alinhado com o espaço que sobra*/
+    /* alinhamento horizontal */
+    align-items: start;/* alinha horizontalmente assim mesmo com o elemento abaixo todos os elementos ficam alinhados mesmos estando com duas linhas */
+    flex-wrap: wrap;/* vai fazer  com que quando a area max seja atingida  os elementos restantes vão para baixo*/
+
+    flex-direction: column;/* vai fazer com que se alinhe em colunas */
+    gap: 30px; /* o espaço entre os elementos de um container */
+
+    /* main axis = eixo principal */
+
+ }
+
+ .item{
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;
+    width: 50px;
+   
+ }
+
+ .box{
+    background-color: #ccc;
+    border: 2px solid blue;
+    height: 50px;/* se eu n delimito a largura ele colaca o minimo possivel para caber os elementos */
+    flex-basis: 30px;/* 30 px por padrão no inico do layout ele "ultrapassa o flex-grow, se eu colocar que um vai ter 100px, ele vai ter 100px e n vai respeitar o flex-grow" */ 
+
+    /* shorthand para flex: grow,shrink basis */
+    flex:1 1 50px
+ }
+
+ #item-1{
+    flex-grow: 1;/* defini como um item vai crescer em um layout */
+ }
+
+ #item-2{
+    flex-grow: 3
+ }
+
+ #item-3{
+    flex-grow: 1;
+    flex-shrink: 2; /* aqui é meio que ao contrario, o item 3 vai diminuir 2 vezes mais do que o resto quando diminuir a tela */
+ }
+
+ /* #item-2{
+    order: 1;/*  o item um para a ordem 1  */
+

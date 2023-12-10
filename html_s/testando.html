@@ -5,55 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
- .container{
-    background-color: #eee;
-    border: 2px solid red;
-    padding: 15px;
-    max-width: 300px;
-    height: 300px;
-    display: flex;/* é meio que a regra que vc coloca para que possa colocar os as outros elementos abaixo */
+.container{
+   display: flex;
+   border: 1px solid red;
+   
+padding: 10px;
+gap: 45vw;
+   align-items: center;
 
-    /* alinhamento vertical */
-    justify-content: space-between;/* center deixa os itens colados no meio. space arouns = deixa alinhado mas com espaçamento. space-between = ele cola no padding (ou na linha mesmo se n tiver padding) e o resto é alinhado com o espaço que sobra*/
-    /* alinhamento horizontal */
-    align-items: center;/* alinha horizontalmente assim mesmo com o elemento abaixo todos os elementos ficam alinhados mesmos estando com duas linhas */
-    flex-wrap: wrap;/* vai fazer  com que quando a area max seja atingida  os elementos restantes vão para baixo*/
- 
-
- }
-
- .item{
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;
-    width: 50px;
- }
-
- .box{
-    background-color: #ccc;
-    border: 2px solid blue;
-    height: 50px;/* se eu n delimito a largura ele colaca o minimo possivel para caber os elementos */
-    flex-basis: 30px;/* 30 px por padrão no inico do layout ele "ultrapassa o flex-grow, se eu colocar que um vai ter 100px, ele vai ter 100px e n vai respeitar o flex-grow" */ 
-
-    /* shorthand para flex: grow,shrink basis */
-    flex:1 1 50px
- }
-
- #item-1{
-    flex-grow: 1;/* defini como um item vai crescer em um layout */
- }
-
- #item-2{
-    flex-grow: 3
- }
-
- #item-3{
-    flex-grow: 1;
-    flex-shrink: 2; /* aqui é meio que ao contrario, o item 3 vai diminuir 2 vezes mais do que o resto quando diminuir a tela */
- }
-
- /* #item-2{
-    order: 1;/*  o item um para a ordem 1  */
+  
+}
 
 
 
@@ -66,11 +27,7 @@
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-        <div class="item">6</div>
-        <div class="item">7</div>
-        <div class="item">8</div>
+
 
     </div>
     <div class="container">
