@@ -5,17 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container{
+    margin: auto;
+    max-width: 1500px;
+    height: 60px;
    display: flex;
    border: 1px solid red;
-   
-padding: 10px;
-gap: 45vw;
+   justify-content: space-between;
    align-items: center;
 
-  
+}
+.item{
+    background-color: aqua;
+    padding: 10px;
+    margin: 0 20px;
+
 }
 
+
+.container1{
+    margin: auto;
+    max-width: 1500px;
+    border: 1px solid red;
+    display: flex;
+   
+
+    min-width: 200px;
+    flex: 1;
+    align-items: flex-start;/* ele que fez o aside o nav não continuarem a cresce verticalmente junto com o main */
+}
+
+
+.item1{
+    background-color: aqua;
+    margin: 0 10px;
+
+
+}
+
+#a1,#a3{
+flex: 0 0 20%;
+}
+
+#a2{
+    flex: 1;
+    background-color: black;
+    color: white;
+    padding: 10px;
+   
+}
+
+@media (max-width: 768px) {
+    .container1 {
+      flex-direction: column; /* Altera para coluna */
+    }
+
+    #a1,
+    #a2,
+    #a3 {
+      flex: 0 0 100%; /* Ocupa 100% da largura em telas menores */
+      margin: 0;
+    }
+  }
 
 
  /* veja a proporção! */
@@ -27,14 +84,15 @@ gap: 45vw;
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
+    </div>
+
+    <div class="container1">
+        <div class="item1" id="a1">nav</div>
+        <div class="item1"id="a2"><h1>blabla</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus adipisci sed in optio, dolore, iure quis illo inventore dicta alias possimus corporis enim cum dolores suscipit quam, eveniet eum deserunt!</p></div>
+        <div class="item1" id="a3">aside</div>
+    </div>
 
 
-    </div>
-    <div class="container">
-        <div class="box" id="item-1">1</div>
-        <div class="box" id="item-2">2</div>
-        <div class="box" id="item-3">3</div>
-    </div>
 
 
 </body>
