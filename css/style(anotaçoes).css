@@ -198,3 +198,8 @@ p{
  /* #item-2{
     order: 1;/*  o item um para a ordem 1  */
 
+table{
+    width: 500px;
+    border-collapse: collapse;/* o padrão é separate que significa que os dados das colunas estarão separados. Mude para collapse */
+}
+

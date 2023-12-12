@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+            thead,tfoot{
+                background-color: black;
+                color: white;
+            }
+
+        caption{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!-- 
+        ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        CAPTION = TÍTULO DA TABELA  
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD, TH
+     -->
+     <table>
+        <CAption>População das Unidades Federativas</CAption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th><!-- está falando que é um título de uma coluna = col -->
+                <th scope="col" style="width: 50px;">População</th><!-- coloquei la em cima que a tabela tem 500 px, então colocando que a aqui tem 50px o estado tera 450px. E por algum motivo muda em toda a coluna -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <TD>São Paulo</TD>
+                <td>44 411 238</td>
+            </tr>
+            <tr>
+                <TD>Minas Gerais</TD>
+                <td>20 538 718</td>
+            </tr>
+            <tr>
+                <TD>Rio de Janeiro</TD>
+                <td>16 054 524</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th scope="row">Total de Habitantes</th><!-- está falando que é um título de uma linha = row -->
+            <td>00000</td>
+
+        </tfoot>
+     </table>
+</body>
+</html>
+
+
+<!-- td:nth-child(2) {
+            text-align: right;
+        } -->
+
+
+
+        <!-- Você pode usar a tag th (table header) sempre que precisar criar uma célula de título, de rótulo... Essa tag (th) serve para especificarmos o título de uma coluna ou até mesmo de uma linha. Essa tag também não precisa ser usada exclusivamente dentro da área da cabeça (thead)... Por exemplo, na área do rodapé (tfoot) podemos ter a necessidade de usar uma célula de título... Ex: cell = " Total de Habitantes: " - Nesse caso podemos usar o th sem problema nenhum, mesmo sendo no rodapé da tabela, visto que é um título. -->
