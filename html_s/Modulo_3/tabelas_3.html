@@ -25,56 +25,76 @@
             padding: 10px;
             background-color: lightgray;
         }
+
+        col.cnome{
+            background-color: aqua;
+        }
+
+        col.csexo{
+            background-color: yellow;
+        }
+
+        div{
+            overflow: auto;/* serve para a tabela ficar responsiva */
+        }
         </style>
 </head>
 <body>
-    <table>
-        <caption>Cadastro</caption>
-        <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Sexo</th>
-            <th>Idade</th>
-            <th>Profissão</th>
-        </tr>
-        </thead>
-        <tr>
-            <td>Ana Maria</td>
-            <td>F</td>
-            <td>25</td>
-            <td>Jornalista</td>
-        </tr>
-        <tr>
-            <td>Cláudio</td>
-            <td>M</td>
-            <td>28</td>
-            <td>Programador</td>
-        </tr>
-        <tr>
-            <td>Gustavo</td>
-            <td>M</td>
-            <td>42</td>
-            <td>Professor</td>
-        </tr>
-        <tr>
-            <td>Hélio</td>
-            <td>M</td>
-            <td>19</td>
-            <td>Vendedor</td>
-        </tr>
-        <tr>
-            <td>Maria</td>
-            <td>F</td>
-            <td>39</td>
-            <td>Médica</td>
-        </tr>
-        <tr>
-            <td>Otávio</td>
-            <td>M</td>
-            <td>22</td>
-            <td>Nutricionista</td>
-        </tr>
-    </table>
+    <div id="container">
+        <table>
+            <colgroup><!-- nova tag do html5 -->
+                <col class="cnome"><!-- serve para vc configurar toda uma coluna(por algum motivo) -->
+                <col class="csexo" span="2"><!-- vai contar como duas colunas se colocar 3 vai contar 3 colunas etc -->
+                <col class="cidade">
+                <col class="cprof">
+            </colgroup>
+            <caption>Cadastro</caption>
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>25</td>
+                <td>Jornalista</td>
+            </tr>
+            <tr>
+                <td>Cláudio</td>
+                <td>M</td>
+                <td>28</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>42</td>
+                <td>Professor</td>
+            </tr>
+            <tr>
+                <td>Hélio</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Vendedor</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>F</td>
+                <td>39</td>
+                <td>Médica</td>
+            </tr>
+            <tr>
+                <td>Otávio</td>
+                <td>M</td>
+                <td>22</td>
+                <td>Nutricionista</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
 
@@ -86,4 +106,11 @@ Lembrando que de acordo com a documentacão oficial, apenas 4 tipos de proprieda
 - Border
 - Background
 - Width
-- Visibility -->
+- Visibility 
+
+Logo qualquer outra propriedade não vai funcionar, como text-align, font-weight etc.
+
+Caso queriam estilizar as colunas de forma livre, utlize tr > td:nth-child(1)
+* Isso vai estilizar cada coluna individualmente assim como colgroup, porem com a liberdade total das propriedades.
+* Lembrando que o numero dentro de nth-child(1) vai definir qual coluna vai ser alterada.
+-->
