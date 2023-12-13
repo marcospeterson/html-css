@@ -19,6 +19,20 @@ body{
     background-image: linear-gradient(to right, #D8B08C, #FFCB9A);
     /*  background-image: radial-gradient( circle, #9804D6, #D20399,#F464A2,#E84A97,#EF6E12,#F6AE0A); */
     /* Podemos colocar a porcentagem de cada cor:( to top, #9804D6 10%, #D20399,#F464A2 20%,#E84A97,#EF6E12,#F6AE0A); */  
+    background-image: url(img/wallpaper002.jpg);/* da pra pegar uma imagem da internet mesmo, sem baixar e o tamanho da viewport não interfere no tamanho da imagem na tela */
+    background-position: center top;/* primeiro coluna depois linha */
+
+    /* Algo que o professor não acabou falando, mas que pode ser muito útil em alguns casos, é poder utilizar "px", no lugar das referências como "left" e "center", sendo o primeiro px para a posição X e o segundo para a posição Y. 
+
+    background-repeat: no-repeat;/* repeat = repete, no-repeat = não repete, repeat-x = repete verticalmente, repeat-y = repete horizontalmente */
+    background-size: cover ;/* background-size: 100%  100%, preenche a tela, mas achata e distorce a imagem. countain = a imagem é 100% exibida, com laterais vazias as vezes. cover = cobre a tela toda mesmo que tenha que cortar a imagem */
+    background-attachment: fixed;/* imagem vai ficar fixada */
+                              
+    /* Shortland background
+        color > image > position > repeat > size > attachment
+        background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+
+    */
 
 }
 
@@ -73,6 +87,8 @@ h1{
    height: 300px;/* tamanho da caixa o de baixo tbm */
    width: 300px;
    background-color: aqua;
+   /* text-transform: uppercase; serve para a letra ficar toda em maiuscula */
+   font-variant: small-caps;/* todas as letras ainda vão estar maiuscula, porem a primeiras letras das palavras vão estar maiores que as outras */
 
 
 
